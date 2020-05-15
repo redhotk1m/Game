@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllerpackage.Controller">
+   <children>
+      <Canvas fx:id="backgroundCanvas" height="3000.0" width="3000.0" />
+      <AnchorPane fx:id="drawPane" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="characterPane" prefHeight="600.0" prefWidth="900.0" />
+      <Rectangle fx:id="blackScreenPaused" arcHeight="5.0" arcWidth="5.0" height="600.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <ImageView fx:id="boxMenu" fitHeight="600.0" fitWidth="900.0" visible="false" playerY="-520.0">
+         <image>
+            <Image url="@../Sources/boxMenu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="boxTop" fitHeight="80.0" fitWidth="900.0">
+         <image>
+            <Image url="@../Sources/boxTop.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="topPanel" prefHeight="70.0" prefWidth="900.0">
+         <children>
+            <Label id="userScoreID" fx:id="labelCoin" layoutX="815.0" prefHeight="40.0" prefWidth="72.0" text="9999">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" spread="0.1" width="10.0" />
+               </effect>
+            </Label>
+            <ImageView id="currentCoin" fitHeight="30.0" fitWidth="55.0" layoutX="780.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Sources/money.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="backgroundHealthbar" arcHeight="5.0" arcWidth="5.0" fill="#b5b5b5" height="25.0" layoutX="50.0" layoutY="5.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="200.0">
+               <effect>
+                  <InnerShadow height="28.0" radius="7.75" width="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="backgroundHealthbarRed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="25.0" layoutX="50.0" layoutY="5.0" stroke="RED" strokeLineCap="ROUND" strokeType="INSIDE" width="200.0">
+               <effect>
+                  <InnerShadow height="28.0" radius="7.75" width="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle id="HP" fx:id="visibleHealthbar" arcHeight="5.0" arcWidth="5.0" fill="#3dff1f" height="25.0" layoutX="50.0" layoutY="5.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="100.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Rectangle id="MP" fx:id="backgroundStaminabar" arcHeight="5.0" arcWidth="5.0" fill="#b5b5b5" height="25.0" layoutX="50.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+               <effect>
+                  <InnerShadow height="28.0" radius="7.75" width="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle id="MP" fx:id="visibleStaminabar" arcHeight="5.0" arcWidth="5.0" fill="#21b9ff" height="25.0" layoutX="50.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+               <effect>
+                  <InnerShadow height="28.0" radius="7.75" width="5.0" />
+               </effect>
+            </Rectangle>
+            <Label fx:id="pauseLabel" layoutX="385.0" layoutY="-460.0" text="PAUSED" textFill="#b92f2f">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="staminaPluss" focusTraversable="false" layoutX="20.0" layoutY="35.0" mnemonicParsing="false" onAction="#coinStamina" text="+">
+               <tooltip>
+                  <Tooltip fx:id="tooltipStamina" anchorX="0.0" anchorY="0.0" text="Click to buy more maximum Stamina">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="healthPluss" focusTraversable="false" layoutX="20.0" layoutY="5.0" mnemonicParsing="false" onAction="#coinHealth" text="+">
+               <tooltip>
+                  <Tooltip fx:id="tooltipHealth" anchorX="0.0" anchorY="0.0" text="Click to buy more maxHP" playerX="0.0" playerY="0.0">
+                     <font>
+                        <Font name="Rockwell" size="14.0" />
+                     </font></Tooltip>
+               </tooltip>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Rectangle fx:id="blackScreen" arcHeight="5.0" arcWidth="5.0" height="600.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="900.0" />
+      <Label fx:id="youDied" layoutX="238.0" layoutY="261.0" opacity="0.0" text="You have died" textAlignment="CENTER" textFill="#b92f2f">
+         <font>
+            <Font name="Rockwell" size="64.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToMenu" focusTraversable="false" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onAction="#menuChangeScene" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: black; -fx-border-width: 3 0 3 0; -fx-border-color: #b92f2f; -fx-border-radius: 10;" text="Back to menu" textFill="#b92f2f">
+         <font>
+            <Font name="Rockwell" size="24.0" />
+         </font>
+      </Button>
+      <VBox fx:id="menuPaused" layoutX="500.0" layoutY="-420.0" prefHeight="375.0" prefWidth="300.0" visible="false">
+         <children>
+            <Button fx:id="resumeGamePaused" focusTraversable="false" mnemonicParsing="false" onAction="#resumeGame" opacity="0.8" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: null;" text="Continue playing">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="saveButton" focusTraversable="false" mnemonicParsing="false" onAction="#savePlayerData" opacity="0.8" prefHeight="60.0" prefWidth="316.0" style="-fx-background-color: null;" text="Save game">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="controlsPaused" focusTraversable="false" mnemonicParsing="false" onAction="#controllerChangeScene" opacity="0.8" prefHeight="60.0" prefWidth="325.0" style="-fx-background-color: null;" text="Controls">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="backToMenuPaused" focusTraversable="false" mnemonicParsing="false" onAction="#menuChangeScene" opacity="0.8" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: null;" text="Back to menu">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="quitGamePaused" focusTraversable="false" mnemonicParsing="false" onAction="#quitGame" opacity="0.8" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: null;" text="Quit game">
+               <font>
+                  <Font name="Rockwell" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="330.0" layoutY="140.0" prefHeight="375.0" prefWidth="270.0">
+         <children>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="36.0">
+               <children>
+                  <VBox layoutY="14.0" prefHeight="330.0" prefWidth="45.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="+">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="+">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="+">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="+">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="+">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="+">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="139.0">
+                     <children>
+                        <Label text="MaxHealth">
+                           <padding>
+                              <Insets top="37.0" />
+                           </padding>
+                           <font>
+                              <Font name="Rockwell" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Heatlh Regen">
+                           <padding>
+                              <Insets top="37.0" />
+                           </padding>
+                        </Label>
+                        <Label text="MaxStamina">
+                           <padding>
+                              <Insets top="37.0" />
+                           </padding>
+                        </Label>
+                        <Label text="StaminaRegen">
+                           <padding>
+                              <Insets top="37.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Speed">
+                           <padding>
+                              <Insets top="37.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Damage">
+                           <padding>
+                              <Insets top="37.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

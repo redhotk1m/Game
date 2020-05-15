@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllerpackage.StoryController">
+   <children>
+      <Canvas fx:id="storyCanvas" height="600.0" width="900.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="600.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Button fx:id="continueButton" layoutX="37.0" layoutY="487.0" mnemonicParsing="false" onAction="#inGame" prefHeight="87.0" prefWidth="826.0" style="-fx-background-color: null; -fx-border-width: 3 0 3 0; -fx-border-color: #b92f2f; -fx-border-radius: 10;" text="Continue" textFill="#b92f2f">
+         <font>
+            <Font name="Rockwell" size="36.0" />
+         </font></Button>
+      <Label layoutX="295.0" layoutY="14.0" prefHeight="32.0" text="Boom, boom, pow, kachink." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="122.0" layoutY="63.0" prefHeight="32.0" text=" You wake up with rage, thinking: WHAT ON EARTH IS MAKING THAT NOISE?  " textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="198.0" layoutY="95.0" prefHeight="32.0" text="Well, it seems there are monsters outside your house Henrik." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="251.0" layoutY="127.0" prefHeight="32.0" text="You see, you're not alone in the forest anymore." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="306.0" layoutY="159.0" prefHeight="32.0" text="There seems to be a witch nearby." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="265.0" layoutY="191.0" prefHeight="32.0" text="How do i know this? you don't need to know." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="200.0" layoutY="223.0" prefHeight="32.0" text="However, she keeps summoning different kinds of monsters." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="149.0" layoutY="255.0" prefHeight="32.0" text="If you want to get rid of all the noise, you will have to get rid of the witch." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="318.0" layoutY="287.0" prefHeight="32.0" text="However, this is no simple task." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="160.0" layoutY="319.0" prefHeight="32.0" text=" I advise you to kill her minions, and get stronger before you face her." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="232.0" layoutY="351.0" prefHeight="32.0" text="Only then will you have the peace you need to sleep." textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="288.0" layoutY="408.0" prefHeight="32.0" text="Now go forth, and good luck!" textFill="#b92f2f" wrapText="true">
+         <font>
+            <Font name="Rockwell" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+   </children>
+</AnchorPane>
