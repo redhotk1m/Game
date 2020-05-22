@@ -1,5 +1,5 @@
 # The-Adventures-of-Henrik
-Old Zelda like RPG game i made during my first year of college. The code is horrible, as i had no understanding of access modifiers / objects and generally any coding structure. However, the game is quite fun.
+Old Zelda like RPG game i made during my first year of college. The code is horrible, as i had no understanding of access modifiers, objects and generally any coding structure. However, the game is quite fun.
 # What i learned
 - Basic Java
 - JavaFX and FXML
